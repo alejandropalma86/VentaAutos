@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-md-12">{{"filtradoPor"}}:</div>
       <div class="col-md-4">
-        <input type="text" id="fil" [(ngModel)]="filtro">
+        <input type="text" [(ngModel)]="filtro">
       </div>
     </div>
     <div class="row pt-3">
@@ -18,7 +18,7 @@
     </div>
   </div>
   <table class="table" *ngIf="listaAutos.length>0">
-    <table class="table">
+    <div class="table">
       <thead>
         <tr class="text-primary">
           <th>
@@ -50,15 +50,14 @@
           <td>{{ auto.kilometros | number }}</td>
           <td>{{ auto.precio | currency }}</td>
           <td>
-            <app-estrellas [calificacion]="auto.calificacion"
-            (starsClick)="onClickCalificacion($event)">
+            <app-estrellas [calificacion]="auto.calificacion">
             </app-estrellas>
 
 
           </td>
         </tr>
       </tbody>
-    </table>
+    </div>
   </table>
 </div>
 
