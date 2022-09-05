@@ -1,6 +1,4 @@
-
-
-<div class="card">
+<div class="card mt-3 ms-5 me-5">
   <div class="card-header">
       <h3>{{tituloListaAutos}}</h3>
   </div>
@@ -22,7 +20,7 @@
       <thead>
         <tr class="text-primary">
           <th>
-            <button class="btn btn-primary" (click)="muestraImagenes()">
+            <button class="btn btn-dark me-2" (click)="muestraImagenes()">
                 {{ muestraImagen ? "Oculta " : "Muestra"}} imagen
             </button>
           </th>
@@ -44,7 +42,9 @@
                   *ngIf="muestraImagen">
           </td>
           <td>{{ auto.marca }}</td>
-          <td>{{ auto.modelo | lowercase | aEspacio:"-" }}</td>
+          <td>
+            <a [routerLink]="['/lista-autos', auto.id]">{{ auto.modelo | lowercase | aEspacio:"-" }}</a>
+          </td>
           <td>{{ auto.anio }}</td>
           <td>{{ auto.color }}</td>
           <td>{{ auto.kilometros | number }}</td>
@@ -61,5 +61,6 @@
     </table>
   </table>
 </div>
+
 
 

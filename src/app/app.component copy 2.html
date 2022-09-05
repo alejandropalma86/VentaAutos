@@ -1,0 +1,25 @@
+<div>
+  <div class="container">
+    <nav class="navbar navbar-expand navbar-light bg-light">
+      <h4>{{"Venta de Autos"}}</h4>
+      <ul class="nav nav-pills mx-3">
+      <li><a class='nav-link' [routerLink]="['/home']">Inicio</a></li>
+      <li><a class="nav-link" [routerLink]="['/lista-autos']">Autos</a></li>
+      <li><a class="nav-link" [routerLink]="['/clientes']">Registrarse</a></li>
+      </ul>
+      </nav>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<router-outlet></router-outlet>

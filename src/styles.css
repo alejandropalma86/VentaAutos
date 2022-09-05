@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+  }
+
+
+
+footer {
+    position: relative;
+    
+  }
+
+  .container-fluid {
+    display: flex;
+    justify-content: center;	
+}
+
+.test {
+    display: flex;
+    height: 100%;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+tamano {
+  width: 500px;
+	height: 500px;
+  max-height: fit-content;
+}

@@ -1,0 +1,72 @@
+
+    
+<div class = "container mt-5" style="max-width: 1000px;">
+    <div class="row">
+        <div class="container">
+            <div class="card" >
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card-header" style="max-width: 1000px;">
+                        <h3>{{tituloPagina + ': ' + auto?.marca + ' ' + auto?.modelo}}</h3>
+                    </div>
+                </div>
+               
+
+                <!-- Lado Izquierdo-->
+                <div class="col-sm-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Marca:</h5>
+                        <h5 class="card-title">Modelo:</h5>
+                        <h5 class="card-title">Año:</h5>
+                        <h5 class="card-title">Color:</h5>
+                        <h5 class="card-title">Kilómetros:</h5>
+                        <h5 class="card-title">Precio:</h5>
+                        <h5 class="card-title">Calificación:</h5>
+                        
+                    </div>
+                </div>
+                <!-- Lado Derecho-->
+                <div class="col-sm-3">
+                    <div class="card-body">
+                        <h5 class="card-text"><small>{{ auto.marca }}</small></h5>
+                        <h5 class="card-text"><small>{{ auto.modelo | lowercase | aEspacio:"-" }}</small></h5>
+                        <h5 class="card-text"><small>{{ auto.anio }}</small></h5>
+                        <h5 class="card-text"><small>{{ auto.color }}</small></h5>
+                        <h5 class="card-text"><small>{{ auto.kilometros | number }}</small></h5>
+                        <h5 class="card-text"><small>{{ auto.precio | currency }}</small></h5>
+                        <h5 class="card-text">
+                            <app-estrellas [calificacion]="auto.calificacion">
+                            </app-estrellas>
+                        </h5>
+
+                       
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="btn btn-dark me-2" style="width:110px" (click)="onBack()">
+                                <fa-icon [icon]="faCartShopping" size="sm"></fa-icon>
+                            Comprar
+                            </button>
+                        </div>
+                       
+                    </div>
+                </div>
+                <!-- Imagen-->
+                <div class="col-sm-6">
+                    <img class="card-img" [src]="auto.imagenUrl" alt="Auto">
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+                <button class="btn btn-dark me-2" style="width:110px" (click)="onBack()">
+                    <fa-icon [icon]="faChevronLeft" size="sm"></fa-icon>
+                Regreso
+                </button>
+            </div>
+
+        </div>
+        </div>
+    </div>
+</div>
+    
+
+    
